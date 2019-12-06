@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] | Penny Saver Razors</title>
+
+    <environment include="Development">
+        <link rel="stylesheet" href="~/css/StyleSheet.css" type="text/css" />
+        <link rel="icon" href="https://face-assets.dollarshaveclub.com/images/favicon.ico">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet">
+    </environment>
+    <environment exclude="Development">
+        <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
+              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+    </environment>
+</head>
+<body>
+    
+    <div style="background-color: white">
+        <div class="app-header-crown">
+            <div class="ui-grid">
+                <p class="ui-grid-left ui-grid-col">Penny Saver Razors</p>
+                <p class="ui-grid-right ui-grid-col">JWSC Inc.</p>
+            </div>
+        </div>
+    </div>
+    <div class="back_white" id="myHeader">
+        <nav class="app-header ui-grid-container">
+            <div class="app-header__text-links">
+                <a class="app-header__link" asp-action="GetStarted">Get Started</a>
+                <a class="app-header__link" asp-action="Products">Products</a>
+                <a class="app-header__link" asp-action="Gift">Gift A Penny</a>
+                <div class="app-header__text-links-edge"></div>
+            </div>
+            <a class="ui-v-align__container app-header__crest" asp-action="Index">
+                <img alt="DSC_Logo" width="55px" height="55px" src="https://face-assets.dollarshaveclub.com/images/ui-elements/app-header/logo-minimal.svg?auto=format&fit=crop">
+            </a>
+            <div class="app-header__text-links app-header__text-links--right">
+                <div class="app-header__text-links-edge"></div>
+                <a class="app-header__link" asp-action="HowItWorks">How It Works</a>
+                <a class="app-header__link" asp-action="Login1">Login</a>
+                <a class="app-header__link" asp-action="Box">Box</a>
+            </div>
+        </nav>
+    </div>
+
+    <div class="content">
+        @RenderBody()
+    </div>
+
+    <footer style="background-color: darkgray">
+        <div class="ui-grid-container footspace">
+            <img class="grayscale" style="filter: grayscale(100%); width: 80px; height: 80px;" src="https://dsc-assets.imgix.net/images/logo.png" alt="footer_logo" />
+            <a class="app-header__link" asp-action="About">About JWSC Inc.</a>
+            <a class="app-header__link" asp-action="Contact">Contact Us</a>
+            <a class="app-header__link" onclick="alert('No one really reads these anyway')">Terms</a>
+            <a class="app-header__link">&copy; 2019 - DSC2</a>
+        </div>
+    </footer>
+
+
+    <environment include="Development">
+        <script src="~/lib/jquery/dist/jquery.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+    </environment>
+    <environment exclude="Development">
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.2.0.min.js"
+                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+                asp-fallback-test="window.jQuery"
+                crossorigin="anonymous"
+                integrity="sha384-K+ctZQ+LL8q6tP7I94W+qzQsfRV2a+AfHIi9k8z8l9ggpc8X+Ytst4yBo/hH+8Fk">
+        </script>
+        <script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/bootstrap.min.js"
+                asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
+                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
+                crossorigin="anonymous"
+                integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa">
+        </script>
+        <script src="~/js/site.min.js" asp-append-version="true"></script>
+    </environment>
+
+    @RenderSection("Scripts", required: false)
+
+    <script>
+        window.onscroll = function () { myFunction() };
+
+        var header = document.getElementById("myHeader");
+        var sticky = header.offsetTop;
+
+        function myFunction() {
+            if (window.pageYOffset > sticky) {
+                header.classList.add("sticky");
+            } else {
+                header.classList.remove("sticky");
+            }
+        }
+    </script>
+</body>
+</html>

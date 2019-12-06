@@ -1,0 +1,217 @@
+﻿@model DSC2.Models.Box1
+@{
+    ViewData["Title"] = "Contact";
+}
+
+<style>
+    body {
+        background-image: url(https://www.myfreetextures.com/wp-content/uploads/2014/10/seamless-wood-background-1.jpg);
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-gap: 50px;
+        padding: 10px;
+        align-items: center;
+    }
+
+    .center img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        align-items: center;
+    }
+
+    .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        width: 275px;
+        margin: auto;
+        text-align: center;
+        font-family: arial;
+    }
+
+    .price {
+        color: black;
+        font-size: 22px;
+    }
+
+    .card button {
+        border: none;
+        outline: 0;
+        padding: 12px;
+        color: white;
+        background-color: #000;
+        text-align: center;
+        cursor: pointer;
+        width: 100%;
+        font-size: 18px;
+    }
+
+    .card button:hover {
+        opacity: 0.7;
+    }
+    .but:focus {
+        background-color: white;
+        color: black;
+        outline: none;
+    }
+
+    .but {
+        background-color: black;
+        border: 1px solid black;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 18px;
+        width: 50%;
+    }
+</style>
+
+<div class="spacer"></div>
+
+<div class="ui-grid-container" style="text-align: center">
+    <div style="display: grid; grid-template-columns: 50% 50%;">
+        <div style="text-align: right;"><button class="but">  Men</button></div>
+        <div style="text-align: left"><button class="but">Women</button></div>
+    </div>
+    <button class="but">All Items</button>
+</div>
+
+<div class="spacer"></div>
+
+<div class="ui-grid-container">
+    <div class="grid">
+        <div class="center card">
+            <img id="RbBp4tQcPPDFvM:" src="https://dsc-cms.imgix.net/v1/qpbrd0hcmuyw/HaOQYDiZQkgc8OmE6KwWM/0d3d2f2836a5c3e8c37e2c7318f69640/ESB-6Z-CURRENT-TILE_8x.png?w=600&auto=format" style="width: 200px; height: 191px">
+            <div class="card">
+                <h1>Shea Butter</h1>
+                <p class="price">$9.99</p>
+                <form asp-action="products" method="post">
+
+                    <input type="hidden" name="Product" value="Shea Butter" />
+                    <input type="hidden" name="Price" value="$9.99" />
+
+                    <button type="submit">Add to box</button>
+                </form>
+            </div>
+        </div>
+        <div class="center card">
+            <img id="RbBp4tQcPPDFvM:" src="https://dsc-cms.imgix.net/v1/qpbrd0hcmuyw/2u4uJP8Dvi0YgkKs26UUO6/4df9a957cbf6c8cd0ad03a6c5178979c/MPS-SRM-2Z-CURRENT-TILE_8x.png?w=600&auto=format" style="width: 200px; height: 191px">
+            <div class="card">
+                <h1>Repair Serum</h1>
+                <p class="price">$9.99</p>
+                <form asp-action="products" method="post">
+
+                    <input type="hidden" name="Product" value="Repair Serum" />
+                    <input type="hidden" name="Price" value="$9.99" />
+
+                    <button type="submit">Add to box</button>
+                </form>
+            </div>
+        </div>
+        <div class="center card">
+            <img id="RbBp4tQcPPDFvM:" src="https://dsc-cms.imgix.net/v1/qpbrd0hcmuyw/67NEYB2t0sI2SQGKOg6Q4k/794f9f06b8e0efc1bc97a77e0ff437cb/BPF-50M-101-CURRENT-TILE.png?w=600&auto=format" style="width: 200px; height: 191px">
+            <div class="card">
+                <h1>Perfume</h1>
+                <p class="price">$9.99</p>
+                <form asp-action="products" method="post">
+
+                    <input type="hidden" name="Product" value="Perfume" />
+                    <input type="hidden" name="Price" value="$9.99" />
+
+                    <button type="submit">Add to box</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="center card">
+            <img id="RbBp4tQcPPDFvM:" src="https://dsc-cms.imgix.net/v1/qpbrd0hcmuyw/3nKexKTp962CMAG4AEC0wM/8a7d59b7a90c42fc4be60afb4165cf21/BPF-50M-203-CURRENT-TILE.png?w=600&auto=format" style="width: 200px; height: 191px">
+            <div class="card">
+                <h1>Cologne</h1>
+                <p class="price">$9.99</p>
+                <form asp-action="products" method="post">
+
+                    <input type="hidden" name="Product" value="Cologne" />
+                    <input type="hidden" name="Price" value="$9.99" />
+
+                    <button type="submit">Add to box</button>
+                </form>
+            </div>
+        </div>
+        <div class="center card">
+            <img id="RbBp4tQcPPDFvM:" src="https://dsc-assets.imgix.net/images/product-images/blades-funnel/MRZ-4B-BM2-CURRENT.png?auto=format&fit=crop&h=594&w=594&q=75&dpr=1" style="width: 200px; height: 191px">
+            <div class="card">
+                <h1>Men</h1>
+                <p class="price">$9.99</p>
+                <form asp-action="products" method="post">
+
+                    <input type="hidden" name="Product" value="Men" />
+                    <input type="hidden" name="Price" value="$9.99" />
+
+                    <button type="submit">Add to box</button>
+                </form>
+            </div>
+        </div>
+        <div class="center card">
+            <img id="RbBp4tQcPPDFvM:" src="https://dsc-assets.imgix.net/images/product-images/blades-funnel/MRZ-2B-BM2-CURRENT.png?auto=format&fit=crop&h=594&w=594&q=75&dpr=1" style="width: 200px; height: 191px">
+            <div class="card">
+                <h1>Women</h1>
+                <p class="price">$9.99</p>
+                <form asp-action="products" method="post">
+
+                    <input type="hidden" name="Product" value="Women" />
+                    <input type="hidden" name="Price" value="$9.99" />
+
+                    <button type="submit">Add to box</button>
+                </form>
+            </div>
+        </div>
+        <div class="center card">
+            <img src="https://dsc-cms.imgix.net/v1/qpbrd0hcmuyw/1pE7IpGPWJiR0Vjf3RmC08/6b29f50c918c9c8a3845bbf39f37d75f/GK-DSS-CURRENT__-TILE.png?w=600&auto=format" style="width: 200px; height: 191px">
+            <div class="card">
+                <h1>Deodorant</h1>
+                <p class="price">$9.99</p>
+                <form asp-action="products" method="post">
+
+                    <input type="hidden" name="Product" value="Deodorant" />
+                    <input type="hidden" name="Price" value="$9.99" />
+
+                    <button type="submit">Add to box</button>
+                </form>
+            </div>
+        </div>
+        <div class="center card">
+            <img src="https://dsc-cms.imgix.net/v1/qpbrd0hcmuyw/PV2GJLtKsoqysOCQAA4oQ/fe1fd15cc36ca3fec1286763bf31df3d/WTO-SP-10Z-CURRENT-TILE_8x.png?w=600&auto=format" style="width: 200px; height: 191px">
+            <div class="card">
+                <h1>2-in-1 Shampoo <br /> & Conditioner</h1>
+                <p class="price">$9.99</p>
+                <form asp-action="products" method="post">
+
+                    <input type="hidden" name="Product" value="2-in-1 Shampoo & Conditioner" />
+                    <input type="hidden" name="Price" value="$9.99" />
+
+                    <button type="submit">Add to box</button>
+                </form>
+            </div>
+        </div>
+        <div class="center card">
+            <img src="https://dsc-cms.imgix.net/v1/qpbrd0hcmuyw/5bM5SkhcxflFhcg4TKmLNf/c79e3dc1a82cadeb11bbc5549b5eef82/BN-FLS-1-TILE_8x__2_.png?w=600&auto=format" style="width: 200px; height: 191px">
+            <div class="card">
+                <h1>Tooth Value Pack</h1>
+                <p class="price">$9.99</p>
+                <form asp-action="products" method="post">
+
+                    <input type="hidden" name="Product" value="Tooth Value Pack" />
+                    <input type="hidden" name="Price" value="$9.99" />
+
+                    <button type="submit">Add to box</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="spacer"></div>

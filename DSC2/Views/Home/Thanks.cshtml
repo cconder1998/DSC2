@@ -1,0 +1,20 @@
+﻿@model DSC2.Models.Box1
+@{
+    ViewData["Title"] = "Thanks";
+}
+
+<div class="spacer"></div>
+
+<div class="ui-grid-container-text">
+    <h1>Thanks!</h1>
+        <h3>@Model.Product</h3>
+        <h4>@Model.Price</h4>
+    <p>
+        Has been added to your Box!<br />
+        Would you like to add more to keep shopping or go to your box?
+    </p><br />
+
+    <a class="get-started" asp-action="Products">Keep Shopping</a><a class="get-started" asp-action="Box">View Box</a>
+
+    <div class="spacer"></div>
+</div>

@@ -1,0 +1,63 @@
+﻿@model IEnumerable<DSC2.Models.Box1>
+@{
+    ViewData["Title"] = "Box";
+}
+
+<style>
+    table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+  background-color: orange;
+  color: white;
+}
+
+</style>
+
+
+
+
+<div class="spacer"></div>
+
+<div class="ui-grid-container-text">
+    <h1>Your Box</h1>
+    <p>
+        Would you like to add more to your subscription box?
+    </p><br />
+
+    <a class="get-started" asp-action="Products">Add More</a>
+</div>
+
+
+<div class="ui-grid-container">
+    <h2>Your Cart</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Product</th>
+                <th>Price</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (DSC2.Models.Box1 r in Model)
+            {
+                <tr>
+                    <td>@r.Product</td>
+                    <td>@r.Price</td>
+                    <td></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <div class="spacer"></div>
+</div>
